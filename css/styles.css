@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  main {
+    padding: 20px;
+    margin: 0 20px;
+    line-height: 1.5; /* størrelsen af mellemrum mellem tekst linjerne */
+  }
+  
+  p {
+    text-align: justify; /* Laver lige margen på teksen */
+  }
+  
+  .special {
+    font-size: large; /* sætter størrelsen på /skrifttypen */
+  }
+  
+  h5, h6  {
+    font-size:larger;
+  }
+  
+  h3, h4, h5, h6 {
+    margin-top: 100px; /* sætter plads over */
+    line-height: 1.5;
+  }
+  
+  h1, h2 {
+  
+    line-height: 1.5;
+  }
+  
+  .Effektiv {
+    text-align: justify;
+  }
+  
+  .Mentzer-Program {
+    text-align: justify;
+  }
+  
+  .Muligheder {
+    text-align: justify;
+  
+  }
+  
+  .Meal-prep {
+    line-height: 1.5;
+  }
+  
+  .Tips {
+    text-align: justify;
+  }
+  
+  @media only screen and (max-width:600px)
+  {
+    body {
+      font-size: 14px; /* størrelsen på skrifttypen */
+    }
+  }
+  body {
+  font-family: tahoma; /* sætter skrifttypen */
+  font-size: 18px;
+  }
+  
+  header {
+  background: white; /* sætter baggrundsfarven */
+  padding: 20px; /* sætter plads væk fra fra kanten */
+  }
+  
+  .header-container {
+  display: flex; /* logo sættes på plads i container */
+  justify-content: space-between; /* retter på placering af mine elementer i containeren. Her sætter den mit søgeikon til rette */
+  align-items: center; /*Centrere mit logo */
+  position: relative; 
+  }
+  
+  .header-container img {
+  max-width: 100px; /* maks bredde sættes på 100px */
+  height: auto; /* højden sætter sig sevl */
+  }
+  
+  .header-container .left {
+  max-width: 50px;
+  }
+  
+  .header-container .right {
+  max-width: 50px;
+  }
+  
+  .header-container .center {
+  max-width: 1000px;
+  height: 100px; /* højden sættes på 100px */
+  position: absolute; /* sætter postitionen på den centrale del af vores header (Her er dette vores logo) */
+  left: 50%; /* Sætter placering fra venstre side */
+  transform: translateX(-50%); /* Sætter placering fra højre side ift den venstre */
+  }
+  
+  nav {
+    background: white;
+    position: sticky; /* Gør så vores navbar følger med når vi scroller ned */
+    top: 0; /* Hvor den skal følge med (I toppen) */
+    z-index: 1; /* Gør så navbaren er foran alt vores content på vores side */
+    box-shadow: 0px 4px 2px -2px black; /* Linje under teksten i vores navbar */
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* fjerner bullet points fra liste */
+    text-align: center;
+    white-space: nowrap; /* teksten bliver på en lige linje */
+  }
+  
+  nav li {
+    display: inline-block; /* sætter min navbar i en lige linje */
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif; /*vælger skrifttype */
+    position: relative; /* For dropdown positioning */
+  }
+  
+  nav li a {
+    padding: 10px 20px; /* skaber mellemrum mellem teksten i navbar */
+    display: inline-block;
+    text-decoration: none; /* fjerner linjen under skriften */
+    color: black; /* sætter skriftfarven til sort */
+    transition: background-color 0.6s ease; /* baggrundsfarven kommer stille og roligt frem på tekstboksen */
+  }
+  
+  nav li a:hover {
+    color: white; /* teksten på skriften når vi hover */
+    background-color: black;
+  }
+  
+  /* Dropdown del */
+  .dropdown-content {
+    display: none; /* Gør den er hidden som default */
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    padding: 0;
+    min-width: 160px;
+  }
+  
+  nav li:hover > .dropdown-content {
+    display: block; /* Viser dropdown på hover */
+  }
+  
+  .dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdown-content li {
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+  
+  .dropdown-content li a:hover {
+    background-color: #ddd;
+  }
+  
+  
+  
+  /* BILLEDER*/
+  
+  img[alt="Mentzer"] {
+    width: 500px;
+    height: auto;
+    float: right; /* Gør så billedet er til højre for teksten */
+    
+  }
+  
+  img[alt="Løb"] {
+    width: 250px;
+    height: auto;
+    float: right;
+    margin-top: -100px; /* Rykker billedet op så det ikke går over teksten */
+    margin-left: 20px; /* skaber plads (til venstre) mellem billede og teksten */
+  }
+  
+  img[alt="center"] {
+  width: 500px;
+  height: auto;
+  float: right;
+  margin-left: 20px;
+  }
+  
+  img[alt="spinning"] {
+  width: 500px;
+  height: auto;
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  }
+  
+  img[alt="mealprep"] {
+  width: 575px;
+  height: auto;
+  float: right;
+  margin-left: 20px;
+  }
+  
+  img[alt="mad"] {
+    width: 500px;
+    height: auto;
+    float: right;
+    margin-left: 20px;
+  }
+  
+  
+  
+  /*PRØVER LIGE NOGET SLIDE SHOW */
+  
+  /* Container for mit slideshow */
+  .slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* gemmer billederne som default */
+  .slide {
+    display: none;
+  }
+  
+  /* stilen for billederne i slideren */
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  .text {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
+  
+  /* Pile til at ændre billede/slide */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Billederne fader */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  
+  
+  
+  
+  
+  /* Specifikt forsiden */
+  .velkommen{
+    font-size:large;
+    line-height:40px;
+    max-width: 1050px; 
+    margin: 0 auto;  
+    padding: 20px;
+    text-align: justify
+  
+  }
+  
+  
+  
+  /* specifikt footer */
+  
+  footer{
+  background-color: black;
+  padding: 20px;
+  text-align:center;
+  }
+  
+  .footer-img{
+    max-width: 1000px;
+    height: 100px;
+    margin-bottom: 3px;
+  }
+  

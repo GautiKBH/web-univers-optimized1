@@ -1,0 +1,154 @@
+<!DOCTYPE html> 
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Su Sund</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <article class="header-container">
+          <img src="img/menubar.jpg" alt="menu billede" class="left">
+          <img src="img/su sund small logol.jpg" alt="logo billede" class="center">
+          <img src="img/search.png" alt="search ikon billede" class="right">
+        </article>
+    </header>
+
+    <nav class="navbar">
+        <article class="container">
+            <ul>
+                <li><a href="#">Sundhed</a>
+                    <article class="dropdown-content">
+                        <ul>
+                            <li><a href="#">Kost og ernæring</a></li>
+                            <li><a href="#">Motivation</a></li>
+                            <li><a href="#">Skade forebyggelse</a></li>
+                        </ul>
+                    </article>
+                </li>
+                <li><a href="#">Artikler</a>
+                    <article class="dropdown-content">
+                        <ul>
+                            <li><a href="artikel1.html">Træningsmuligheder i Aarhus</a></li>
+                            <li><a href="artikel2.html">Sundhedstips for Studerende</a></li>
+                            <li><a href="artikel3.html">Træningstips til Studerende</a></li>
+                        </ul>
+                    </article>
+                </li>
+                <li><a href="#">Træningsmuligheder</a>
+                    <article class="dropdown-content">
+                        <ul>
+                            <li><a href="#">Fitness</a></li>
+                            <li><a href="#">Holdtræning</a></li>
+                            <li><a href="#">Løb</a></li>
+                            <li><a href="#">Træningsprogrammer</a></li>
+                        </ul>
+                    </article>
+                </li>
+                <li><a href="#">Studiefordele</a>
+                    <article class="dropdown-content">
+                        <ul>
+                            <li><a href="#">Studierabat</a></li>
+                            <li><a href="#">Studie events</a></li>
+                            <li><a href="#">Studiekort</a></li>
+                        </ul>
+                    </article>
+                </li>
+                <li><a href="#">Kontakt</a>
+                    <article class="dropdown-content">
+                        <ul>
+                            <li><a href="#">Nyhedsbrev</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">Q&A</a></li>
+                        </ul>
+                    </article>
+                </li>
+            </ul>
+        </article>
+    </nav>
+    
+    
+
+    <main>
+        <article class="slideshow-container">
+            <script src="show.js"></script>
+
+            <!-- Slide 1 -->
+            <article class="slide fade">
+              <a href="artikel1.html">
+                <img src="img/risskov center.jpg" alt="Artikel 1">
+                <article class="træningsmuligheder">Træningsmuligheder i Aarhus: Guide til Studerende</article>
+              </a>
+            </article>
+          
+            <!-- Slide 2 -->
+            <article class="slide fade">
+              <a href="artikel2.html">
+                <img src="img/mealprep.webp" alt="Artikel 2">
+                <article class="sundhedstips">Sundhedstips for Studerende: Nemme Vaner i Hverdagen</article>
+              </a>
+            </article>
+          
+            <!-- Slide 3 -->
+            <article class="slide fade">
+              <a href="artikel3.html">
+                <img src="img/mikementzer.webp" alt="Artikel 3">
+                <article class="træningstips">Træningstips til Studerende: Kom i Form Effektivt</article>
+              </a>
+            </article>
+          
+            <!-- Navigations pile -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </article>
+    </main>
+
+    <section class="velkommen">
+        <h2>Velkommen til SU SUND – Din Guide til Træning og Sundhed i Aarhus</h2>
+        <p>
+            Hos SU SUND er vi dedikerede til at gøre det nemt og inspirerende for dig som studerende at finde balancen mellem studie og sund livsstil. Vi ved, at hverdagen kan være travl med forelæsninger, opgaver og fritidsaktiviteter, men din sundhed bør aldrig komme i anden række.
+            
+            På SU SUND finder du alt, hvad du behøver for at holde dig i form og leve sundt, uden at det går ud over dit budget. Fra de bedste træningsmuligheder i Aarhus og studierabatter på fitnesscentre til gratis træningsmuligheder i byens parker – vi har samlet det hele på ét sted.
+            
+            Lad os hjælpe dig med at opnå dine sundhedsmål, så du kan præstere dit bedste både på studiet og i livet.</p>
+        
+    </section>
+
+    <footer>
+        <img src="img/su sund footer logo.jpg" alt="Footer Logo" class="footer-img"> <!--logo til toppen af min footer-->
+        <img src="img/sociale medier.png" alt="Footer media" class="footer-socials">
+        <p class="Ophavsret">Ophavsret 2024 SU Sund</p>
+    </footer>
+
+    <!--Her indsætter jeg javascripten for min slider. Har fået den af chatgpt og ændret lidt på nogen values. Ville bare gerne opnå det design jeg havde tænkt fra starten med en slider. -->
+    <script>
+        let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+
+  setTimeout(showSlides, 5000); // 
+}
+
+function plusSlides(n) {
+  slideIndex += n;
+  if (slideIndex > slides.length) {slideIndex = 1} 
+  if (slideIndex < 1) {slideIndex = slides.length}
+  
+  showSlides();
+}
+
+     </script>
+</body>
+</html>
